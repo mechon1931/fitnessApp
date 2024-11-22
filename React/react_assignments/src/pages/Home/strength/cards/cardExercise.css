@@ -1,0 +1,65 @@
+/* Container for the entire card */
+.card_container {
+    margin: 20px; /* Adds space around the card */
+    border-radius: 10px; /* Rounds the corners of the card */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  }
+  
+  .card_container:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+  }
+  
+  /* Styling for the card image */
+  .card_img {
+    border-top-left-radius: 10px; /* Rounds top-left corner */
+    border-top-right-radius: 10px; /* Rounds top-right corner */
+    object-fit: cover; /* Ensures image fits within bounds */
+    height: 300px; /* Sets a consistent height for the image */
+    width: 100%; /* Ensures full-width coverage */
+  }
+  
+  /* Styling for the card title */
+  .card_title {
+    font-size: 1.5rem; /* Increases font size for visibility */
+    font-weight: bold; /* Makes the title bold */
+    text-align: center; /* Centers the title */
+    color: #333; /* Sets a dark gray color */
+  }
+  
+  /* Styling for the card text */
+  .card_text {
+    font-size: 1rem; /* Adjusts text size */
+    color: #555; /* Sets a medium gray color */
+    text-align: center; /* Centers the text */
+    margin: 10px 0; /* Adds spacing between text and other elements */
+  }
+  
+  /* Styling for the button */
+  .btn_primary {
+    background-color: #1abc9c; /* Custom button color */
+    border: none; /* Removes default border */
+    padding: 10px 0px; /* Adds padding for better clickability */
+    font-size: 1rem; /* Adjusts font size */
+    font-weight: bold; /* Makes text bold */
+    text-transform: uppercase; /* Optional: Uppercase text */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+    width: 100%; /*full width coverage */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-decoration: none; /*removes lines */
+    color: white;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .btn_primary:hover {
+    background-color: #16a085; /* Slightly darker color on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  .btn_primary:active {
+    background-color: #138a70; /* Darker shade on active state */
+    transform: scale(1); /* Resets scale when pressed */
+  }

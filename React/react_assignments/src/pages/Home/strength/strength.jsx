@@ -1,3 +1,5 @@
+import ExerciseCard from "./cards/cardExercise";
+
 
 function Strength() {
     return(
@@ -11,6 +13,10 @@ function Strength() {
                     The page provides tools and resources for users to log their exercises, sets, reps, and, weights, monitor their progress,
                     and access workout plans tailored to specific goals, such as building muscle, improving endurance, or enhancing overall strength.
                 </p>
+            </section>
+
+            <section>
+                <ExerciseCard />
             </section>
 
 

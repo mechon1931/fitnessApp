@@ -18,7 +18,7 @@ Summary screen for daily/weekly stats.
 Learning Approach:
 Setup:
 
-Install React Native and set up a project.
+Install React and set up a project.
 Configure navigation and basic screens.
 UI Components:
 
@@ -33,3 +33,8 @@ Add a library like react-native-chart-kit to display progress.
 Testing & Debugging:
 
 Test components and debug functionality as we go
+
+
+Home page is added with 4 cards to show strength, running, crosffit, and performance. 
+Navbar is added to navigations link to sheets. WIll update link once they are created. 
+React Calendar is installed but not used probably a login a feature for each user. 

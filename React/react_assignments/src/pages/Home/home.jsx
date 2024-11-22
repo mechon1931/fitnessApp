@@ -3,6 +3,7 @@ import './home_images.css';
 import strengthImage from '../../assets/homePage/strenght_male_female_photo.jpeg';
 import runningImage from '../../assets/homePage/running_track_photo.jpeg';
 import crossfitImage from '../../assets/homePage/crossfit_photo.jpeg';
+import performanceImage from '../../assets/homePage/performance_tracker.jpeg';
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -38,7 +39,7 @@ function Home() {
                     </div>
 
                     <div className='workout_image'>
-                        <img src={crossfitImage} alt='performance_photo_stock' className='image'/>
+                        <img src={performanceImage} alt='performance_photo_stock' className='image'/>
                         <button href='#performance' className='link_button'>Perfomance</button>
                     </div>
                 </div>
