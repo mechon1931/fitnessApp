@@ -1,30 +1,42 @@
 import Carousel from 'react-bootstrap/Carousel';
+import  Dropdown  from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from "../../../../assets/homePage/strength/workoutplan.jpeg"
+import { useState } from 'react';
 
 const workoutPlans = [
   { id: 1,
-    title: "Push Day",
-    description: "Focuses on chest, shoulders, and triceps.",
+    title: "Push, Pull, and Leg",
+    description: "There are ways around not having a gym membership. Essenetial moves are push, pull, and leg; some basic equipment will get you there.",
     image: Image,
+    workouts: [
+      { name: "Push-Ups", sets: "4-6", reps: "To Failure" }, 
+      { name: "Inverted Rows", sets: "4-6", reps: "To Failure" },
+      { name: "Reverse Lunges or Step-ups", sets: "4-6", reps: "6-8" }
+    ],
     },
   {
     id: 2,
-    title: "Pull Day",
-    description: "Targets back, biceps, and rear delts.",
+    title: "Dumbbell Push, Pull, and Legs",
+    description: "Dumbbell only full body circuit",
     image: Image,
-  },
-  {
-    id: 3, 
-    title: "Leg Day",
-    description: "Builds strength in quads, hamstrings, and glutes.",
-    image: Image,
+    workouts: [
+      { name: "Flat-Bench Dumbbell Press", sets: "4-6", reps: "10-12" },
+      { name: "One-Arm Dumbbell Row", sets: "4-6", reps: "10-12" },
+      { name: "Dumbbell Squat(or Lunge)", sets: "4-6", reps: "10-12" },
+    ],
   },
 ]
 function WorkoutPlan() {
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleCarouselClick = () => {
+    setShowDropdown(!showDropdown); // Toggle dropdown visibility
+  };
+
   return(
     <>
-      <Carousel>
+      <Carousel onClick={handleCarouselClick}>
         {workoutPlans.map((plan) => (
           <Carousel.Item key={plan.id}>
              <img 
@@ -39,6 +51,25 @@ function WorkoutPlan() {
           </Carousel.Item>
         ))}
       </Carousel>
+
+      {showDropdown && (
+        <Dropdown show>
+          <Dropdown.Menu className="workout_dropdown">
+            {workoutPlans.map((plan, index) => (
+              <Dropdown.Item key={index}>
+                <strong>{plan.title}</strong>
+                <ul>
+                  {plan.workouts.map((workout, i) => (
+                    <li key={i}>
+                      {workout.name} {workout.sets} sets {workout.reps} reps
+                    </li>
+                  ))}
+                </ul>
+              </Dropdown.Item>
+            ))}
+          </Dropdown.Menu>
+        </Dropdown>
+      )}
     </>
   )
 }
