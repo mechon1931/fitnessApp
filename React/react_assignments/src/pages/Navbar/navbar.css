@@ -1,16 +1,3 @@
-/* Notification Header Styles */
-.notification_header {
-    background-color: blue;
-    display: flex;
-    align-items: center; /* Centers text vertically */
-    justify-content: center; /* Centers text horizontally */
-    height: 36px; /* Height of the box */
-    color: white; /* Text color */
-    position: sticky; /* Sticks to the top while scrolling */
-    top: 0; /* Ensures it stays at the very top */
-    z-index: 1000; /* Ensures it appears above other content */
-    padding: 0 10px; /* Adds some horizontal padding */
-}
 
 /* Header Container Styles */
 header {

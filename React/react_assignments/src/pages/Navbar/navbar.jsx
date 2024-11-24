@@ -1,5 +1,6 @@
 import './navbar.css';
 import { Link, useLocation } from 'react-router-dom';
+import NotificationHeader from './NotificatoinArea/notificationCarousel';
 
 
 function Navbar() {
@@ -7,8 +8,7 @@ function Navbar() {
 
     return(
         <>
-            <div className='notification_header'>This is the notification area </div>
-            
+            <NotificationHeader />            
             <header className='header_nav'>
                 <div className='logo'>
                     <h1 className='header_title'>Fitness Application</h1>
